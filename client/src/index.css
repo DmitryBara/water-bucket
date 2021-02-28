@@ -1,0 +1,55 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+
+/* Form */
+#field {
+  min-width:200px;
+}
+
+.input-container {
+  margin-top: 20px;
+}
+
+input.field {
+  border-bottom: 1px solid #fff!important;
+  box-shadow: 0 1px 0 0 #fff!important;
+}
+input.field:focus {
+  border-bottom: 1px solid #ffeb3b!important;
+  box-shadow: 0 1px 0 0 #fff!important;
+}
+
+input.field + label {
+  color: #fff!important;
+}
+input.field:focus + label {
+  color: #ffeb3b!important;
+}
+
+
+/* Bucket State Zone */
+
+#bucket-state-zone {
+  max-height: 25rem;
+  overflow: scroll
+}
+
+.bucket-state-line {
+  display: block;
+  margin-top: -0.1rem;
+}
+
+.one-cell {
+  display: inline-block;
+  width: 33.3%;
+}
+
+span {
+  display: block;
+  text-align: center;
+}
+
+hr {
+  color: white;
+  width: 80%;
+}

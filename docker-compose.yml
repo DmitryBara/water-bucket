@@ -1,0 +1,45 @@
+version: '3.7'
+
+
+volumes:
+  postgres_data:
+
+services:
+
+  backend-container:
+    build: .
+    command: npm run server
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - 8020:8020
+    volumes:
+      - ./:/opt
+    depends_on:
+      - postgres-container
+
+  frontend-container:
+    build: client/
+    command: npm run client
+    restart: always
+    env_file:
+      - client/.env
+    ports:
+      - 3005:3005
+    volumes:
+      - ./:/opt
+    
+
+  postgres-container:
+    image: postgres:12.0-alpine
+    ports:
+      - 5432:5432
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_MULTIPLE_DATABASES=${POSTGRES_DB_WORK},${POSTGRES_DB_TEST}
+    volumes:
+      - postgres_data:/data/db
+      - ./docker_multiple_databases:/docker-entrypoint-initdb.d
+  
