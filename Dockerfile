@@ -6,4 +6,3 @@ WORKDIR /opt/
 EXPOSE 8020
 
 RUN npm install --silent
-RUN npm run test

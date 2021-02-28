@@ -8,7 +8,7 @@ services:
 
   backend-container:
     build: .
-    command: npm run server
+    command: sh -c "npm run test && npm run server"
     restart: always
     env_file:
       - .env

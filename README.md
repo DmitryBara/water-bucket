@@ -1,19 +1,17 @@
 # water-bucket
 
-1. By docker
+### By docker
 
 Application can be started by `docker-compose up --build`.
 Be sure that next ports are available:
 
-3005 - for frontend
-8020 - for backend
-5432 - for postgres
+`3005` - for frontend; `8020` - for backend; `5432` - for postgres.
 
 When you make some changes they will be automatically delivered inside container.
 If you need make test inside docker container just execute:
 `docker exec -it <container name> npm run test`
 
-2. By npm
+### By npm
 
 set environment variable in client/.env:
 `BACKEND_SERVER=http://localhost:8020`
