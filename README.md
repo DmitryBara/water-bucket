@@ -9,7 +9,7 @@ Be sure that next ports are available:
 
 When you make some changes they will be automatically delivered inside container.
 If you need make test inside docker container just execute:
-`docker exec -it <container name> npm run test`
+`docker exec -it backend-container npm run test`
 
 ### By npm
 

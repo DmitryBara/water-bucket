@@ -8,7 +8,7 @@ services:
 
   backend-container:
     build: .
-    command: sh -c "npm run test && npm run server"
+    command: npm run server
     restart: always
     env_file:
       - .env
@@ -38,7 +38,10 @@ services:
     env_file:
       - .env
     environment:
-      - POSTGRES_MULTIPLE_DATABASES=${POSTGRES_DB_WORK},${POSTGRES_DB_TEST}
+      - POSTGRES_MULTIPLE_DATABASES=${DB_WORK},${DB_TEST}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_HOST=${DB_HOST}
     volumes:
       - postgres_data:/data/db
       - ./docker_multiple_databases:/docker-entrypoint-initdb.d
