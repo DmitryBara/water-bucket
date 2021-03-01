@@ -15,20 +15,22 @@ services:
     ports:
       - 8020:8020
     volumes:
-      - ./:/opt
+      - ./:/app
+      - /app/node_modules
     depends_on:
       - postgres-container
 
   frontend-container:
     build: client/
-    command: npm run client
+    command: npm run start
     restart: always
     env_file:
       - client/.env
     ports:
       - 3005:3005
     volumes:
-      - ./:/opt
+      - ./client/:/app/client
+      - /app/client/node_modules
     
 
   postgres-container:

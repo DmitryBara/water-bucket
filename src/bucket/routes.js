@@ -1,7 +1,7 @@
 const { Router } = require('express')
 const { validate } = require('express-validation')
 const Serializer = require("sequelize-json-serializer");  
-const { Op } = require('Sequelize');
+const { Op } = require('sequelize');
 const router = Router()
 const { BucketData, BucketState } = require('./models.js')
 const { BucketValidation } = require('./validators')

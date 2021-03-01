@@ -1,7 +1,8 @@
 FROM node:13.8-alpine
 
-ADD . /opt/
-WORKDIR /opt/
+WORKDIR /app/client
+
+COPY . .
 
 EXPOSE 3005
 
