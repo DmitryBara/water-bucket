@@ -20,9 +20,6 @@ Find id of backend-container you can runnning `docker ps` in console.
 
 2. From root run `npm install` and `npm run client:install`.
 
-3. Set environment variable in client/.env:
-```DB_HOST=localhost```
-
 3. Syncronyze settings in `.env` file with your database (login, password, host).
 Be sure that you have 2 databases at server: DB_WORK and DB_TEST.
 Then run `npm run dev`. This command will start frontend and backend concurrently.
