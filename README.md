@@ -10,7 +10,8 @@ and then run `docker-compose up --build`.
 
 When you make some changes they will be automatically delivered inside container.
 If you need make test inside docker container just execute:
-`docker exec -it backend-container npm run test`
+`docker exec -it <container-id> npm run test`
+Find id of container you can runnning `docker ps`.
 
 ### By npm
 
