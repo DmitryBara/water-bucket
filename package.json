@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
-    "start": "cross-env NODE_ENV=production ./src/server.js",
+    "start": "cross-env NODE_ENV=production node ./src/server.js",
     "server": "nodemon ./src/server.js",
     "client": "npm run start --prefix client",
     "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
