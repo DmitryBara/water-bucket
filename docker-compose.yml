@@ -22,7 +22,7 @@ services:
 
   frontend-container:
     build: client/
-    command: npm run build
+    command: npm run start
     restart: always
     env_file:
       - client/.env
