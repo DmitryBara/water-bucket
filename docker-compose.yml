@@ -8,7 +8,7 @@ services:
 
   backend-container:
     build: .
-    command: npm run server
+    command: npm run start
     restart: always
     env_file:
       - .env
@@ -22,7 +22,7 @@ services:
 
   frontend-container:
     build: client/
-    command: npm run start
+    command: npm run build
     restart: always
     env_file:
       - client/.env
